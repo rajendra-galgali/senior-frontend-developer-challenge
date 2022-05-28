@@ -1,0 +1,30 @@
+{
+  "name": "senior-frontend-developer-challenge",
+  "version": "1.0.0",
+  "description": "Not just ‘Frontend’, are you a pro at web development with a special liking for JavaScript? How about working with a team that’s full of the creative breed and where food and outings are considered as being equally important to work?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/give-india/senior-frontend-developer-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/give-india/senior-frontend-developer-challenge/issues"
+  },
+  "homepage": "https://github.com/give-india/senior-frontend-developer-challenge#readme",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-sanitize": "^1.8.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.18.1",
+    "is-json": "^2.0.1",
+    "lodash": "^4.17.21",
+    "ngstorage": "^0.3.11"
+  }
+}

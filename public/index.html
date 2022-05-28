@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="ObjectCompare">
+
+<head>
+    <title>Object Compate</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<style>
+    s {
+        color: red;
+    }
+</style>
+
+<body ng-controller='objectController'>
+    <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/lib/is-json/index.js"></script>
+    <script type="text/javascript" src="/lib/ngstorage/ngStorage.js"></script>
+    <script type="text/javascript" src="/lib/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="/lib/lodash/lodash.js"></script>
+    <script data-require="lodash.js@*" data-semver="3.1.0"
+        src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.1.0/lodash.min.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Base Object</h1>
+        </div>
+        <div class="col-md-6">
+            <h1>JSON Path</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <textarea name="w3review" rows="15" cols="70" ng-model="baseObject" ng-change="onChangeValues()"
+                ng-blur="onChangeValues()"></textarea>
+        </div>
+        <div class="col-md-6">
+            <textarea name="w3review" rows="15" cols="70" ng-model="jsonPath" ng-change="onChangeValues()"
+                ng-blur="onChangeValues()"></textarea>
+        </div>
+    </div>
+    <span style="color: red;" ng-if="errorMessage">{{errorMessage}}</span>
+    <div ng-if="showDataDiff">
+        <span ng-bind-html="showDataDiff | json"></span>
+
+    </div>
+</body>
+
+</html>
